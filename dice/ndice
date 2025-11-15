@@ -1,0 +1,26 @@
+#!/usr/bin/env perl
+
+use v5.35;
+use Term::ANSIColor;
+use Data::Dumper;
+
+my $input = join(" ", @ARGV);
+
+if ( $input  =~ m/
+   ^
+   (?<dice_exp>\d+d\d+)
+
+
+/x ){
+
+   my $dice_exp = $+{dice_exp};
+   say "dice_exp = $dice_exp";
+
+
+
+};
+
+
+my $color = int(rand(257));
+say colored("red foo", "ansi$color");
+say "plain foo";
